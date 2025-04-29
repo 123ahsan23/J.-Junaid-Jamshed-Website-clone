@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to cart page</title>
+
+    <style>
+          * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .head {
+        background-color: green;
+        height: 6vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 999;
+      }
+
+      .head > p {
+        color: white;
+        text-align: center;
+        line-height: 6vh;
+        font-family: Georgia, "Times New Roman", Times, serif;
+
+        display: inline-block;
+        position: relative;
+        left: 70vh;
+      }
+
+      .head > a {
+        display: inline-block;
+        position: relative;
+        left: 70vh;
+        color: white;
+        text-decoration: none;
+        font-size: small;
+      }
+      .yellow {
+        color: yellow;
+      }
+
+      .navbar {
+        height: 20vh;
+        width: 100%;
+        background-color: rgb(240, 234, 234);
+        position: fixed;
+        top: 6vh;
+        z-index: 998;
+      }
+      .first-line {
+        display: flex;
+        height: 7vh;
+        width: 100%;
+        gap: 20px;
+        align-items: center;
+        padding-left: 100px;
+      }
+
+      .second-line {
+        display: flex;
+        height: 7vh;
+        width: 100%;
+        gap: 50px;
+        align-items: center;
+        position: relative;
+        bottom: 3.4vh;
+        padding-left: 40px;
+      }
+
+      .deco {
+        text-decoration: none;
+        color: black;
+        font-size: small;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+
+      #img1 {
+        height: 15px;
+      }
+
+      #img2 {
+        padding-left: 600px;
+      }
+
+      .section1{
+        height: 80vh;
+        width: 99.6%;
+        display: flex   ;
+        position: relative;
+        top: 26vh;
+      }
+      .firstimage{
+        height: 50vh;
+        width: 20%;
+        background-image: url(https://www.junaidjamshed.com/media/catalog/product/j/t/jtk-50043_3_.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=755&width=589&canvas=589:755);
+        background-size: cover;
+        cursor: pointer;
+        position: relative;
+        left: 40vh;
+        top: 10vh;
+      }
+
+      .firstimage:hover{
+        border: 2px solid white;
+
+      }
+
+
+      .secondimage{
+        height: 50vh;
+        width: 20%;
+        background-image: url(https://www.junaidjamshed.com/media/catalog/product/4/0/40224-1_3.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=755&width=589&canvas=589:755);
+        background-size: cover;
+        cursor: pointer;
+        position: relative;
+        left: 60vh;
+        top: 10vh;
+      }
+
+      .secondimage:hover{
+        border: 2px solid white;
+
+      }
+
+
+      .thirdimage{
+        height: 50vh;
+        width: 20%;
+        background-image: url(https://www.junaidjamshed.com/media/catalog/product/4/0/40201-1_3.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=755&width=589&canvas=589:755);
+        background-size: cover;
+        cursor: pointer;
+        position: relative;
+        left: 80vh;
+        top: 10vh;
+      }
+
+      .thirdimage:hover{
+        border: 2px solid white;
+
+      }
+
+      .section1{
+       height: 20vh;
+       width: 99.8%;
+      }
+
+      .heading{
+        height: 100%;
+        width: 100%;
+        background-color: rgb(117, 117, 117);
+      }
+
+      .section2{
+        height: 12vh;
+        width: 99.8%;
+
+        margin-top: 30vh;
+
+      }
+
+      .row1{
+        display: flex;
+       gap: 10vh;
+       padding-top: 8vh;
+       padding-left: 10vh;
+      }
+      
+      .row2{
+        display: flex;
+        height: 30vh;
+        width: 99.8%; 
+      }
+
+
+      .section3{
+        height: 34vh;
+        width: 99.8%;
+        margin-top: 40vh;
+
+
+      }
+
+      .subtotal{
+        height: 25vh;
+        width: 30%;
+        margin-left: 65vh;
+        margin-top: 3vh;
+
+
+      }
+
+
+      .foot {
+        height: 100vh;
+        width: 99.8%;
+
+      }
+      
+
+      .lastbox {
+        height: 40vh;
+        width: 80%;
+        background-color: black;
+        position: relative;
+        left: 25vh;
+        top: 6vh;
+      }
+
+      .row1 {
+        height: 10vh;
+        width: 100%;
+        text-align: center;
+        position: relative;
+        bottom: 2vh;
+
+      }
+
+
+      .row1 > h4 {
+        position: relative;
+        line-height: 10vh;
+        color: white;
+        left: 60vh;
+      }
+
+      .row2 {
+        height: 10vh;
+        width: 100%;
+
+        text-align: center;
+        position: relative;
+       bottom: 2vh;
+      }
+      .row2>h4{
+position: relative;
+left: 50vh;
+      }
+
+      .row3 {
+        height: 12vh;
+        width: 100%;
+
+        text-align: center;
+        position: relative;
+       bottom: 2vh;
+      }
+
+      .row4 {
+        display: flex;
+        height: 10vh;
+        width: 100%;
+        gap: 15vh;
+
+        position: relative;
+        top: 7vh;
+        align-items: center;
+        padding-left: 20vh;
+        font-size: larger;
+      }
+
+      .row5 {
+        display: flex;
+        height: 30vh;
+        width: 100%;
+
+        position: relative;
+        bottom: 3vh;
+        align-items: center;
+      }
+
+      .row5 > img {
+        margin-left: 30vh;
+      }
+
+      .row6 {
+        display: flex;
+        height: 30vh;
+        width: 100%;
+        position: relative;
+        bottom: 2vh;
+      }
+
+      
+    </style>
+</head>
+<body style="overflow-x: hidden;">
+
+      <header>
+        <div class="head">
+          <p>
+            Shop now & Get a chance to win an
+            <span class="yellow">Umrah ticket .</span>
+          </p>
+          <a href="">See Details..</a>
+        </div>
+      </header>
+  
+      <nav>
+        <div class="navbar">
+          <div class="first-line">
+            <a class="deco" id="sign" href="#">SIGN IN</a>
+            <img
+              class="deco"
+              id="img1"
+              src="https://www.junaidjamshed.com/static/version1724493823/frontend/Rltsquare/junaidjamshed/en_US/Magento_Theme/images/pak-flag.png"
+              alt=""
+            />
+            <a class="deco" id="track" href="#">TRACKING INFO</a>
+            <a class="deco" id="corp" href="#">CORPORATE INQUIRY</a>
+            <a class="deco" id="acc" href="#">CREATE AN ACCOUNT</a>
+            <img
+              class="deco"
+              id="img2"
+              src="https://www.junaidjamshed.com/static/version1744491123/frontend/Rltsquare/junaidjamshed/en_US/Magento_Theme/images/cart.png"
+              alt=""
+            />
+            <a class="deco" id="search" href="#">SEARCH</a>
+          </div>
+          <img
+            src="https://www.junaidjamshed.com/media/logo/stores/1/new_logo.png"
+            alt=""
+            style="position: relative; height: 8vh; left: 100vh; bottom: 4vh"
+          />
+  
+          <div class="second-line">
+            <a class="deco" href="#">NEW ARRIVALS</a>
+            <a class="deco" href="#" style="color: cadetblue; font-size: large"
+              >SYNCC</a
+            >
+            <a
+              class="deco"
+              href="#"
+              style="color: rgb(233, 208, 65); font-size: x-large"
+              >CAST & CREW</a
+            >
+            <a class="deco" href="#" style="color: red">FEATURED COLLECTION</a>
+            <a class="deco" href="#">WOMEN</a>
+            <a class="deco" href="#">MEN</a>
+            <a class="deco" href="#">BOYS AND GIRLS</a>
+            <a class="deco" href="#">FRAGRANCES</a>
+            <a class="deco" href="#">MAKEUP</a>
+            <a class="deco" href="#">SKINCARE</a>
+          </div>
+        </div>
+      </nav>
+
+      <main>
+        <section class="section1">
+            <div class="heading">
+            <h3 style="color: white; font-family: Arial, Helvetica, sans-serif ; font-weight: 100; padding-left: 89vh; padding-top: 7vh; font-size: xx-large;">Shopping cart</h3>
+        </div>
+
+        </section>
+
+
+        <section class="section2">
+            <div class="row1">
+                <h5>PRODUCT</h5>
+                <h5 style="position: relative; left: 80vh;">PRICE</h5>
+                <h5 style="position: relative; left: 90vh;">QUANTITY</h5>
+                <h5 style="position: relative; left: 100vh;">TOTAL</h5>
+                
+            </div>
+            <hr>
+
+            <div class="row2">
+                <img src="https://www.junaidjamshed.com/media/catalog/product/4/6/46597_2_.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=755&width=589&canvas=589:755" alt="" height="160vh" style="position: relative; left: 7vh; top: 3vh; ">
+
+                <p style="position: relative; left: 9vh; top: 10vh;">BLUE BLENDED KURTA | JTK-A-34976</p>
+
+                <p style="text-decoration: line-through; position: relative; left: 40vh; top: 10vh;">Rs. 8,490.00 </p>
+                <p style=" position: relative; left: 40vh; top: 10vh;">Rs. 5,518.50  </p>
+
+                <select name="" id="" style="height: 5vh; position: relative; left: 50vh; top: 8vh;">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                </select>
+                <p style=" position: relative; left: 75vh; top: 10vh;">Rs. 5,518.50</p>
+                
+
+            </div>
+           
+        </section>
+
+        <section class="section3">
+
+            <div class="subtotal" style="display: flex;">
+                <h3 style="text-align: center; font-weight: 800; font-family: Verdana, Geneva, Tahoma, sans-serif;">Subtotal:
+                    Rs. 5,518.50
+                    <br>
+                    All charges are billed in PKR. While the content of your cart is currently displayed in , the checkout will use PKR at the most current exchange rate.</h3>
+
+
+                    <a href="checkout.html">
+                    <button id="btn" style="background-color: black; color: white; border: 1px solid white; position: relative;left: 10vh; top: 10vh; height: 8vh; width: 20vh; position: relative;cursor: pointer; border-radius: 10px; ">Checkout</button>
+                </a>
+
+            </div>
+        </section>
+      </main>
+        
+      <footer class="foot">
+        <div class="lastbox">
+          <div class="row1">
+            <h4>BE THE FIRST.</h4>
+          </div>
+  
+          <div class="row2">
+            <h4 style="color: white; font-size: 2.5vh; text-align: center">
+              New arrivals. Exclusive previews. First access to sales. <br />Sign
+              up to stay in the know.
+            </h4>
+          </div>
+  
+          <div class="row3">
+            <table>
+              <input
+                style="width: 20%; height: 8vh; position: relative"
+                type="text"
+                placeholder="Enter your Email Address"
+              />
+  
+              <button
+                style="
+                  background-color: black;
+                  color: white;
+                  border: 1px solid white;
+                  position: relative;
+                  left: 2vh;
+                  height: 7vh;
+                  width: 10%;
+                "
+              >
+                Sign Up
+              </button>
+            </table>
+          </div>
+        </div>
+  
+        <div class="row4">
+          <h4>NEED HELP?</h4>
+          <h4>CATALOGUE</h4>
+          <h4>CUSTOMER SERVICE</h4>
+          <h4>COMPANY</h4>
+          <h4>FOLLOW US</h4>
+        </div>
+  
+        <div class="row5">
+          <img
+            src="https://www.junaidjamshed.com/media/wysiwyg/telephone.png"
+            alt=""
+            style="height: 5vh"
+          />
+          <span>03304573462</span>
+  
+          <span style="position: relative; right: 20vh; top: 4vh">
+            (Mon - Sat: 9:30am - 7:30pm | Sun: 11am - 5pm)</span
+          >
+  
+          <p style="width: 10%; height: 10vh; padding-top: 4vh">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+            error
+          </p>
+  
+          <p style="position: relative; left: 15vh; top: 1vh">
+            About Us
+            <br />
+            Career
+            <br />
+            Store Addresses
+          </p>
+  
+          <a
+            href="https://www.facebook.com/j.junaidjamshed"
+            style="
+              position: relative;
+              left: 30vh;
+              bottom: 2vh;
+              text-decoration: none;
+            "
+            >Facebook</a
+          >
+  
+          <a
+            href="https://twitter.com/_JunaidJamshed"
+            style="
+              position: relative;
+              left: 20vh;
+              top: 1vh;
+              text-decoration: none;
+            "
+            >Twitter</a
+          >
+  
+          <a
+            href="https://www.youtube.com/channel/UC5xbg6lBACA3HBdN8idiQvQ"
+            style="
+              position: relative;
+              left: 13vh;
+              top: 4vh;
+              text-decoration: none;
+            "
+            >Youtube</a
+          >
+        </div>
+  
+        <div class="row6">
+          <img
+            src="https://www.junaidjamshed.com/media/wysiwyg/ubl_pay_logo.png"
+            alt=""
+            height="25vh"
+            style="position: relative; left: 20vh"
+          />
+  
+          <img
+            src="https://www.junaidjamshed.com/media/wysiwyg/Raast_Logo-1.png"
+            alt=""
+            height="25vh"
+            style="position: relative; left: 20vh"
+          />
+  
+          <img
+            src="https://www.junaidjamshed.com/media/wysiwyg/Paypak-logo-1.png"
+            alt=""
+            height="25vh"
+            style="position: relative; left: 20vh"
+          />
+          <img
+            src="https://www.junaidjamshed.com/media/wysiwyg/American-Express-1.png"
+            alt=""
+            height="25vh"
+            style="position: relative; left: 20vh"
+          />
+          <img
+            src="https://www.junaidjamshed.com/media/wysiwyg/unionpay_logo.png"
+            alt=""
+            height="25vh"
+            style="position: relative; left: 20vh"
+          />
+  
+          <img
+            src="https://www.junaidjamshed.com/media/wysiwyg/pci-dss-logo-1.png"
+            alt=""
+            height="25vh"
+            style="position: relative; left: 130vh"
+          />
+          <img
+            src="https://www.junaidjamshed.com/media/wysiwyg/SSLlogo1.jpeg"
+            alt=""
+            height="25vh"
+            style="position: relative; left: 130vh"
+          />
+        </div>
+      </footer>
+</body>
+</html>
